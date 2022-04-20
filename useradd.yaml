@@ -1,0 +1,19 @@
+---
+
+-  name: "adding user"
+   become: true
+   hosts: linux
+   tasks:
+
+
+     - name: "Creating user in ansible client"
+       user:
+         name: jibincl
+         uid: 2026
+         group: ec2-user
+         password: "{{ passwd|password_hash('sha512') }}"
+         shell: /bin/bash
+         createhome: yes
+         home: /home/jibincl
+         state: present
+
