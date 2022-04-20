@@ -76,6 +76,18 @@ useradd.yaml
 
 ~~~
 
+## Let's check on the yaml file:
+
+~~~
+1. hosts: here im mentioning the groupname specified in hosts file, so that we dont need to mention each cleint nodes.
+2. user : Its used for Manage user accounts.
+3. name: Set the username ( here my user name is jibincl ).
+4. groups: Assign a groups. Here I add this user to groups "ec2-user".
+5. password: Settup encripted password for user
+6. shell: You can define any shell. The default is /bin/bash. 
+7. createhome: Yes to create a home directory, no to not create one
+8. home: If you don't want to use the default location, set it here
+~~~
 
 By running this playbook, a user named "jibincl" will be created on the client node. 
 
@@ -99,6 +111,15 @@ ansible-playbook -i hosts useradd.yml --extra-vars passwd=jibin@123
 ~~~
 
 Here, im implimenting the password with the command using "--extra-vars passwd=jibin@123"
+
+## Checking the credentials by logging in
+
+![image](https://user-images.githubusercontent.com/100774483/164171047-e9e8286b-5f95-4ba4-bdc4-e3197f2a394e.png)
+
+# Conclusion
+
+In this tutorial, we discussed about creating a user in ansible client node using playbook.
+
 
 
 
