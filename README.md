@@ -16,9 +16,9 @@ This is an ansible playbook for creating a user with password on client node fro
 
 Now lets get into it..
 
-## Step 1
+# Step 1
 
-Installing ansible on manager node and client node
+## Installing ansible on manager node and client node
 
 ~~~
 sudo amazon-linux-extras install ansible2 -y
@@ -35,7 +35,7 @@ ansible 2.9.23
 
 # Step 2
 
-Adding client node in hosts of manager node
+## Adding client node in hosts of manager node
 
 
 For this i have created a file "hosts" under the user's home directory.
@@ -50,7 +50,7 @@ Key.pem is the private key that im using for accessing the client node. [ansible
 
 # Step 3
 
-Creating yaml file to add user
+## Creating yaml file to add user
 
 useradd.yaml
 
@@ -79,9 +79,9 @@ useradd.yaml
 
 By running this playbook, a user named "jibincl" will be created on the client node. 
 
-## Step 4
+# Step 4
 
-checing the syntax and running the file
+## checing the syntax and running the file
 
 
 Checking the syntax
